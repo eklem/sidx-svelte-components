@@ -10,9 +10,16 @@
 	const readJSONData = function (url) {
 		console.log('soon to read JSON data')
 		fetch('https://raw.githubusercontent.com/eklem/dataset-vinmonopolet/master/dataset-vinmonopolet-sparkling.json')
-			.then(response => response.json())	
-			.then(JSONdata => indexJSONData(JSONdata))
-			.catch(function (err) {
+			.then(response => {
+				if (!response.ok) {
+					throw new Error('Network response was not ok')
+				}
+				return response.json()
+			})	
+			.then(JSONdata => {
+				indexJSONData(JSONdata)
+			})
+			.catch(err => {
 				console.log('Error while reading data: \n' + err.message)
 			})
 	}
@@ -20,10 +27,10 @@
 	const indexJSONData = function (data) {
 		console.log('soon indexing data: ' + JSON.stringify(data))
 		idx.PUT(data)
-			.then(function (message) {
+			.then(message => {
 				console.log('Data indexed. Number of documents indexed: ' + message)
 			})
-			.catch(function (err) {
+			.catch(err => {
 				console.log('Error while indexing: \n' + err.message)
 			})
 	}
