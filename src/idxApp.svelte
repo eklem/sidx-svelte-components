@@ -12,10 +12,10 @@
 		fetch('https://raw.githubusercontent.com/eklem/dataset-vinmonopolet/master/dataset-vinmonopolet-sparkling.json')
 			.then(response => {
 				if (!response.ok) {
-					throw new Error('Network response was not ok')
+      		throw new Error('Network response was not ok');
 				}
-				return response.json()
-			})	
+				return response.json())	
+			} 
 			.then(JSONdata => {
 				indexJSONData(JSONdata)
 			})
@@ -30,10 +30,25 @@
 			.then(message => {
 				console.log('Data indexed. Number of documents indexed: ' + message)
 			})
-			.catch(err => {
+			.catch(function (err) {
 				console.log('Error while indexing: \n' + err.message)
 			})
 	}
+
+	fetch('flowers.jpg')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.blob();
+  })
+  .then(myBlob => {
+    myImage.src = URL.createObjectURL(myBlob);
+  })
+  .catch(error => {
+    console.error('There has been a problem with your fetch operation:', error);
+  });
+
 
 	readJSONData()
 	

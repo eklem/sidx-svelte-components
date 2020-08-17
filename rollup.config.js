@@ -33,7 +33,7 @@ export default {
 	output: {
 		sourcemap: true,
 		format: 'iife',
-		name: 'app',
+		name: 'idxapp',
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
@@ -58,7 +58,6 @@ export default {
 			transformMixedEsModules: true
 		}),
 		commonjs(),
-		esm(),
 		nodePolyfills(),
 
 		// In dev mode, call `npm run start` once

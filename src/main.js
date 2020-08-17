@@ -1,10 +1,10 @@
-import App from './App.svelte';
+import idxApp from './idxApp.svelte';
 
-const app = new App({
+const idxapp = new idxApp({
 	target: document.body,
 	props: {
-		name: 'idx-svelte'
+		name: 'svelte-idx-components'
 	}
 });
 
-export default app;
+export default idxapp;
