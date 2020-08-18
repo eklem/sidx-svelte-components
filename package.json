@@ -1,5 +1,5 @@
 {
-  "name": "svelte-idx-components",
+  "name": "svelte-sidx-components",
   "version": "0.0.1",
   "scripts": {
     "build": "rollup -c",

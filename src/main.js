@@ -1,9 +1,9 @@
-import idxApp from './idxApp.svelte';
+import sidxApp from './sidxApp.svelte';
 
-const idxapp = new idxApp({
+const sidxapp = new sidxApp({
 	target: document.body,
 	props: {
-		name: 'svelte-idx-components'
+		name: 'svelte-sidx-components'
 	}
 });
 
