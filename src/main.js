@@ -7,4 +7,4 @@ const sidxapp = new sidxApp({
 	}
 });
 
-export default idxapp;
+export default sidxapp;
