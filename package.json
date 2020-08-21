@@ -1,6 +1,7 @@
 {
   "name": "svelte-sidx-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "description": "Search-index components for Svelte to quickly create your own browser based search engine.",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -19,5 +20,18 @@
   "dependencies": {
     "search-index": "^1.0.6",
     "sirv-cli": "^1.0.0"
-  }
+  },
+  "keywords": [
+    "search",
+    "offline-first",
+    "browser",
+    "indexedDB"
+  ],
+  "author": "Espen Klem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eklem/svelte-sidx-components/issues"
+  },
+  "homepage": "https://github.com/eklem/svelte-sidx-components#readme"
+}
 }

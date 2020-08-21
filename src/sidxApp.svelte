@@ -7,7 +7,7 @@
 	
 </script>
 
-<main>
+<main class="sidxApp">
 	<h1>sidxApp</h1>
 
 	<h2>Data in</h2>
@@ -15,4 +15,7 @@
 </main>
 
 <style>
+	main {
+		padding: 5px;
+	}
 </style>

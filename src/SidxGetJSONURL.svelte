@@ -42,7 +42,6 @@
   div {
     padding: 15px;
     background:#eeeeee;
-    margin:10px;
   }
   pre {
     height:10rem;
