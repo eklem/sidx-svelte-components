@@ -7,12 +7,7 @@
   async function readJSONURLData() {
     displayData = false
     fetch(jsonURL)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok')
-        }
-        return response.json()
-      })
+      .then(response => response.json())
       .then(JSONdata => {
         contentToIndex = JSON.stringify(JSONdata, null, 2)
         contentCount = JSONdata.length
@@ -50,5 +45,8 @@
     background:#dddddd;
     padding:5px;
     margin-bottom:0;
+  }
+  h3 {
+    margin-top:0;
   }
 </style>

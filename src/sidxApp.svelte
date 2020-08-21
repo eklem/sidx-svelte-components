@@ -7,7 +7,7 @@
 	
 </script>
 
-<main class="sidxApp">
+<main>
 	<h1>sidxApp</h1>
 
 	<h2>Data in</h2>
