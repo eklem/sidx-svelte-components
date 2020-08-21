@@ -5,6 +5,7 @@
   let displayData = false
 
   async function readJSONURLData() {
+    displayData = false
     fetch(jsonURL)
       .then(response => {
         if (!response.ok) {
