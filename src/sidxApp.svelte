@@ -3,14 +3,15 @@
 	import {inherits} from 'util'
 
 	import si from 'search-index'
-	import Sidxgeturl from './SidxGetURL.svelte'
-	import Nested from './Nested.svelte'
+	import Sidxgetjsonurl from './SidxGetJSONURL.svelte'
 	
 </script>
 
 <main>
 	<h1>sidxApp</h1>
-	<Sidxgeturl />
+
+	<h2>Data in</h2>
+	<Sidxgetjsonurl />
 </main>
 
 <style>
