@@ -1,7 +1,7 @@
-import sidxApp from './sidxApp.svelte';
+import sidxApp from './sidxApp.svelte'
 
 const sidxapp = new sidxApp({
 	target: document.body
-});
+})
 
-export default sidxapp;
+export default sidxapp
