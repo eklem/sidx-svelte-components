@@ -1,6 +1,6 @@
-import sidxApp from './sidxApp.svelte'
+import idxApp from './idxApp.svelte'
 
-const sidxapp = new sidxApp({
+const idxapp = new idxApp({
 	target: document.body
 })
 

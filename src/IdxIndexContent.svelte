@@ -1,26 +1,33 @@
 <script>
-  import { sidx, contentToIndex, contentLength, docsIndexed } from './stores.js'
+  import { PUT, contentToIndex, contentLength, docsIndexed } from './IdxStores.js'
+  let promise = Promise.resolve([])
+
   // Not sure why I have these, works without
   // import EventEmitter from 'events'
   // import { inherits } from 'util'
 
-  const indexJSONData = function () {
-    sidx.PUT($contentToIndex)
+  async function indexJSONData() {
+    return await PUT($contentToIndex)
       .then(message => {
-          console.log('Something?')
+          alert('some "index finished" message')
+          alert(message)
+          console.log('async PUT finished, returning')
           docsIndexed.set(message)
-          console.log('docs indexed: ' + message)
       })
       .catch(function (err) {
         console.log('Error while indexing: \n' + err.message)
       })
   }
+
+  function handleClick() {
+    promise = indexJSONData()
+  }
 </script>
 
-<div class="component">
+<div class="idxComponent">
   <h3>Index data</h3>
   {#if $contentLength != 0}
-    <p>Documents to index: {$contentLength}</p>
+    <p>Documents to index: {$contentLength} - Documents indexed: {$docsIndexed}</p>
     <button id="getJSONContent" on:click={indexJSONData}>Add data to search index</button>
   {:else}
     <p>Need some data to index...</p>
