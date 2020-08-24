@@ -1,14 +1,14 @@
 <script>
-  import { SEARCH, searchResult } from './IdxStores.js'
+  import { idx, searchResult } from './IdxStores.js'
   let promise = Promise.resolve([])
 
-  // import EventEmitter from 'events'
-  // import { inherits } from 'util'
+  import EventEmitter from 'events'
+  import { inherits } from 'util'
   
   let userQuery = ''
 
   async function searchSimple() {
-    return await SEARCH(...(userQuery.split(' ')))
+    return await idx.SEARCH(...(userQuery.split(' ')))
       .then(results => {
         searchResult.set(JSON.stringify(results))
         console.log('query: ' + JSON.stringify(userQuery))

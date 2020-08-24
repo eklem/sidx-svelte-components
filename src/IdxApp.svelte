@@ -2,11 +2,14 @@
 	import Idxgetjsonurl from './IdxGetJSONURL.svelte'
 	import Idxindexcontent from './IdxIndexContent.svelte'
 	import Idxsearchsimple from './IdxSearchSimple.svelte'
+
+	// import Test from './test.svelte'
 </script>
 
 <main>
 	<h1>idxApp</h1>
 
+	<!-- <Test /> -->
 	<h2>Data in</h2>
 	<Idxgetjsonurl />
 	<Idxindexcontent />

@@ -1,10 +1,13 @@
 // Making possible with centrally stored (store.js) data imported and changed in components
 import { readable, writable } from 'svelte/store'
 // Just the search index function
+import EventEmitter from 'events'
+import { inherits } from 'util'
 import si from 'search-index'
 
 // Exported variables to be used (and some changed) in child components
-export let { SEARCH, AND, OR, NOT, GET, DOCUMENTS, DICTIONARY, DISTINCT, DELETE, BUCKET, BUCKETFILTER, INDEX, PUT } = si({ name: 'myIndex' })
+// export let { SEARCH, AND, OR, NOT, GET, DOCUMENTS, DICTIONARY, DISTINCT, DELETE, BUCKET, BUCKETFILTER, INDEX, PUT } = si({ name: 'myIndex' })
+export let idx = si({ name: 'myIndex' })
 
 // Data in
 export const contentToIndex = writable({})

@@ -1,13 +1,13 @@
 <script>
-  import { PUT, contentToIndex, contentLength, docsIndexed } from './IdxStores.js'
+  import { idx, contentToIndex, contentLength, docsIndexed } from './IdxStores.js'
   let promise = Promise.resolve([])
 
   // Not sure why I have these, works without
-  // import EventEmitter from 'events'
-  // import { inherits } from 'util'
+  import EventEmitter from 'events'
+  import { inherits } from 'util'
 
   async function indexJSONData() {
-    return await PUT($contentToIndex)
+    return await idx.PUT($contentToIndex)
       .then(message => {
           alert('some "index finished" message')
           alert(message)

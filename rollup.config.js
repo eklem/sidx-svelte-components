@@ -55,7 +55,8 @@ export default {
 		resolve({
 			browser: true,
 			dedupe: ['svelte'],
-			transformMixedEsModules: true
+			transformMixedEsModules: true,
+			preferBuiltins: false
 		}),
 		commonjs(),
 		nodePolyfills(),
